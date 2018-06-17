@@ -1,4 +1,7 @@
 <template lang="pug">
-  section.container
-    h1 Events Page
+  section.page
+    h4.bg-primary.py-2.mb-0.text-white
+      .container Eventos
+    .container
+      h1.text-white Events Page
 </template>

@@ -1,3 +1,4 @@
 <template lang="pug">
-  div About Page
+  section.page
+    .container About Page
 </template>

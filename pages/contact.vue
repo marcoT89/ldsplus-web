@@ -1,3 +1,4 @@
 <template lang="pug">
-  div Contact Page
+  section.page
+    .container Contact Page
 </template>
