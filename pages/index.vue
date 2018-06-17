@@ -1,7 +1,5 @@
 <template lang="pug">
   section.page
-    .bg-success
-      p love
     .container
       h1 LDS+ Device
       button.btn.btn-primary.btn-block Yeah

@@ -28,10 +28,10 @@ export default {
   data: () => ({
     showNavs: false,
     links: [
-      { text: 'Home', path: '/' },
-      { text: 'About', path: '/about' },
-      { text: 'Contact', path: '/contact' },
-      { text: 'Events', path: '/events' },
+      { text: 'Início', path: '/' },
+      { text: 'Sobre', path: '/about' },
+      { text: 'Contato', path: '/contact' },
+      { text: 'Eventos', path: '/events' },
     ],
     position: {
       x: 0,
