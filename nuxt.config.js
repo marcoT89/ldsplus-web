@@ -34,5 +34,14 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  modules: [
+    '@nuxtjs/pwa',
+  ],
+  plugins: [
+    {
+      src: '~plugins/velocity.js',
+      ssr: false
+    }
+  ]
 }
