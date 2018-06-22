@@ -1,14 +1,10 @@
 <template lang="pug">
   .fixed.navigation.text-white(:class="{ visible }")
     .navs.d-flex.flex-column.h-100.pb-5
-      list-transition
-        div(
-          v-for="(link, index) of items",
-          :key="index",
-          :data-index="index",
-        )
-          slot(:link="link")
-            a.nav-link.font-weight-light {{ link.text }}
+      mt-menu(:menus="items", track-by="text")
+        template(slot-scope="{ menu }" v-if="!$slots.default")
+          slot(:menu="menu")
+            nuxt-link.nav-link.text-capitalize.font-weight-light.text-white(:to="menu.path") {{ menu.text }}
     .footer.w-100(:class="{ visible }")
       .text-center.text-white.bg-primary
         span(style="opacity: 0.3; font-size: 12px")
@@ -19,31 +15,32 @@
 <script>
 
 import ListTransition from '~/components/transitions/ListTransition'
+import MtMenu from '~/components/menus/MtMenu'
 
 export default {
-  components: { ListTransition },
+  components: { ListTransition, MtMenu },
 
   props: {
     visible: { default: false },
-    links: { required: true, type: Array },
+    navs: { required: true, type: Object },
   },
 
   data: () => ({
-    items: []
+    items: {}
   }),
 
   watch: {
     visible() {
       this.toggle()
     },
-    links() {
+    navs() {
       this.toggle()
     },
   },
 
   methods: {
     toggle() {
-      this.items = this.visible ? [...this.links] : []
+      this.items = this.visible ? {...this.navs} : {}
     },
     closeList() {}
   }
@@ -54,7 +51,7 @@ export default {
 .navs
   .nav-link
     text-align: center
-    font-size: 2.5rem
+    font-size: 2rem
 </style>
 
 

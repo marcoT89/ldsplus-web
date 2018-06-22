@@ -17,7 +17,7 @@ export default {
     },
 
     enter(el, done) {
-      const delay = el.dataset.index * 80
+      const delay = el.dataset.index * 150
       this.$velocity(
         el,
         { opacity: 1, translateX: '0px' },
@@ -26,7 +26,7 @@ export default {
     },
 
     leave(el, done) {
-      const delay = 80
+      const delay = el.dataset.index * 80
       this.$velocity(
         el,
         { opacity: 0, translateX: '-30px' },
