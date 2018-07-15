@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'spa',
   /*
   ** Headers of the page
   */
@@ -21,6 +22,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    vendor: ['vue-directive-waves'],
     /*
     ** Run ESLint on save
     */
@@ -42,6 +44,11 @@ module.exports = {
     {
       src: '~plugins/velocity.js',
       ssr: false
-    }
+    },
+    {
+      src: '~plugins/vue-plugins.js',
+      ssr: false
+    },
+    '~components/shared',
   ]
 }
