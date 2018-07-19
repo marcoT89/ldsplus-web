@@ -2,7 +2,7 @@
   section.page
     h4.bg-primary.py-2.mb-0.text-white
       .container Events
-    div.page-content.container
+    div.page-content.container.pb-0
       .form-group
         input.search.form-control(placeholder="Search for events...")
 
@@ -16,8 +16,15 @@
         small.p-2.text-uppercase.text-success
           span inscrito
           i.fa.fa-check.ml-1
-    fab-button.btn.btn-primary.btn-lg.z-depth-2
-      i.fa.fa-plus
+      .fab-buttons.d-flex.justify-content-end.align-items-center
+        fab-button.small.btn.btn-success.z-depth-2
+          i.fa.fa-check
+        fab-button.small.btn.btn-secondary.z-depth-2
+          i.fa.fa-calendar
+        fab-button.small.btn.btn-warning.z-depth-2
+          i.fa.fa-circle
+        fab-button.btn.btn-primary.z-depth-2
+          i.material-icons add
 
 </template>
 

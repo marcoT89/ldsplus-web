@@ -1,0 +1,23 @@
+.fab-buttons
+    position: fixed
+    bottom: 0
+    width: calc(100vw - 30px)
+    padding: 15px 0
+
+    .fab-button
+        margin-left: 10px
+        width: 57px
+        height: 57px
+        padding: 0
+
+        &.small
+            font-size: 0.75rem
+            width: 37px
+            height: 37px
+
+    @include media-breakpoint-down('sm', $grid-breakpoints)
+        max-width: calc(100vw - 30px)
+
+    @each $breakpoint, $container-max-width in $container-max-widths
+        @include media-breakpoint-up($breakpoint, $grid-breakpoints)
+            max-width: calc(#{$container-max-width} - 30px)
