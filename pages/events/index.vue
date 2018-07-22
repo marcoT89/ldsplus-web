@@ -6,7 +6,7 @@
       .form-group
         input.search.form-control(placeholder="Search for events...")
 
-      .row.event-entry.d-flex.align-items-center.mb-0.px-2(v-for="n of 31", v-waves)
+      .row.event-entry.d-flex.align-items-center.mb-0.px-2(v-for="n of 31", @click="goto(n)", v-waves)
         .p-2.text-center
           h3.event-day.mb-0 {{ n }}
           .event-month jun
@@ -28,8 +28,20 @@
 
 </template>
 
+<script>
+export default {
+  methods: {
+    goto(id) {
+      console.log("goto id", id);
+      this.$router.push(`events/${id}`);
+    }
+  }
+};
+</script>
+
+
 <style lang="sass" scoped>
-@import '../assets/design-bootstrap'
+@import '../../assets/design-bootstrap'
 
 .event-entry
   .event-title

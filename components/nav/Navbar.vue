@@ -65,15 +65,6 @@ export default {
       children: [
         { text: 'Início', path: '/' },
         { text: 'Menus', path: '/menus' },
-        { text: 'Sobre', path: '', active: false, children: [
-          { text: 'Sobre mim', path: '/about' },
-          { text: 'Sobre a Poly', path: '/about' },
-          { text: 'Sobre Família', path: '/about', children: [
-            { text: 'Sub Menu 1', path: '/menus' },
-            { text: 'Sub Menu 2', path: '/menus' },
-          ] },
-        ]},
-        { text: 'Contato', path: '/contact' },
         { text: 'Eventos', path: '/events' },
       ]
     },

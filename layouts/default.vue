@@ -5,11 +5,11 @@
 </template>
 
 <script>
-import Navbar from '~/components/nav/Navbar'
+import Navbar from "~/components/nav/Navbar";
 
 export default {
-  components: { Navbar },
-}
+  components: { Navbar }
+};
 </script>
 
 <style lang="sass">

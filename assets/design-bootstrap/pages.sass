@@ -1,5 +1,6 @@
 @import '../animations/page'
 
+// page transition
 .page-enter-active
   animation: pageIn .3s ease-out both .3s
 .page-leave-active
@@ -7,3 +8,9 @@
 
 .page-content
   padding: 1rem
+
+// slide-left transition
+.slide-left-enter-active
+  animation: slideLeftIn .3s ease-out both .3s
+.slide-left-leave-active
+  opacity: 0.9

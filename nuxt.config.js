@@ -17,7 +17,14 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: { color: 'white', height: '2px' },
+
+  loadingIndicator: {
+    name: 'folding-cube',
+    color: 'white',
+    background: '#377dff'
+  },
+
   /*
   ** Build configuration
   */
@@ -26,7 +33,7 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    extend (config, { isDev, isClient }) {
+    extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
